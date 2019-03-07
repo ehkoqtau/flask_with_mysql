@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+    <h1>Flask</h1>
+    <p class="lead">Ketika membuat ini semua terlihat sangat mantul :D.</p>
+    <p><a href="http://flask.pocoo.org/" class="btn btn-primary btn-large">Baca lebih &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Rumus Lingkaran</h2>
+        <p>
+            Luas Lingkaran = {{ m_rumus_mtk.hitungLuas() }}</br>
+            Keliling Lingkaran = {{ m_rumus_mtk.hitungKeliling() }}
+        </p>
+        <p><a class="btn btn-default" href="#">Baca lebih &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Kolom 2</h2>
+        <p>Bahasa python sekarang makin digemari.</p>
+        <p><a class="btn btn-default" href="#">Baca lebih &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Kolom 3</h2>
+        <p>Ternyata untuk membuat web di python itu sangat mudah.</p>
+        <p><a class="btn btn-default" href="#">Baca lebih &raquo;</a></p>
+    </div>
+</div>
+
+{% endblock %}
