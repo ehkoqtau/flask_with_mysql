@@ -1,0 +1,75 @@
+{% extends "header.html" %}
+
+{% block body %}
+
+<body class="red">
+    <!-- Start Page Loading -->
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
+    <!-- End Page Loading -->
+
+
+
+    <div id="error-page">
+
+        <div class="row">
+            <div class="col s12">
+                <div class="browser-window">
+                    <div class="top-bar">
+                        <div class="circles">
+                            <div id="close-circle" class="circle"></div>
+                            <div id="minimize-circle" class="circle"></div>
+                            <div id="maximize-circle" class="circle"></div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="row">
+                            <div id="site-layout-example-top" class="col s12">
+                                <p class="flat-text-logo center white-text caption-uppercase">Maaf sepertinya ada kendala disisi server, mohon maaf atas ketidaknyamanannya, sesegera mungkin akan diperbaiki...</p>
+                            </div>
+                            <div id="site-layout-example-right" class="col s12 m12 l12">
+                                <div class="row center">
+                                    <h1 class="col s12">{{}}</h1>
+                                </div>
+                                <div class="row center">
+                                    <p class="center white-text col s12">Halaman yang ingin anda akses tidak ditemukan, atau halaman ini sudah tidak aktif lagi</p>
+                                    <p class="center s12"><button onclick="goBack()" class="btn waves-effect waves-light">Kembali</button> <a href="/" class="btn waves-effect waves-light">Beranda</a>
+                                    <p>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ================================================
+      Scripts
+      ================================================ -->
+    <!-- jQuery Library -->
+    <script type="text/javascript" src="/static/assets/js/plugins/jquery-1.11.2.min.js"></script>
+    <!--materialize js-->
+    <script type="text/javascript" src="/static/assets/js/materialize.js"></script>
+    <!--prism-->
+    <script type="text/javascript" src="/static/assets/js/plugins/prism/prism.js"></script>
+    <!--scrollbar-->
+    <script type="text/javascript" src="/static/assets/js/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+
+    <!--plugins.js - Some Specific JS codes for Plugin Settings-->
+    <script type="text/javascript" src="/static/assets/js/plugins.js"></script>
+    <!--custom-script.js - Add your own theme custom JS-->
+    <script type="text/javascript" src="/static/assets/js/custom-script.js"></script>
+
+    <script type="text/javascript">
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+{% endblock %}
